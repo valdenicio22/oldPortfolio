@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import BtnLink from 'components/BtnLink'
 import * as S from './styles'
 
 export type WelcomeProps = {
@@ -13,9 +13,7 @@ const Welcome = ({ id }: WelcomeProps) => (
         <br /> a Front-end developer
       </S.WelcomeMsg>
       <S.Msg>Stick around to see some of my work.</S.Msg>
-      <S.WorkLink>
-        <Link href="#work">See my work</Link>
-      </S.WorkLink>
+      <BtnLink section="#work">See my work</BtnLink>
     </S.WelcomeMesgContainer>
     <S.ImgContainer></S.ImgContainer>
   </S.WelcomeContainer>
