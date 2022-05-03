@@ -69,7 +69,8 @@ const AboutMe = ({ id }: AboutMeProps) => {
           <img
             src="https://avatars.githubusercontent.com/u/40251933?v=4"
             alt="My profile photo"
-          ></img>
+          />
+          {/* <img src="/img/me.png" alt="My profile picture" /> */}
         </S.Photo>
       </S.AboutMePhotoContainer>
     </S.Wrapper>
