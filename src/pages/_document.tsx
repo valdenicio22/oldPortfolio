@@ -41,9 +41,8 @@ export default class MyDocument extends Document {
       <Html lang="pt-BR">
         <Head />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-
         <link
-          href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap"
           rel="stylesheet"
         />
         <body>

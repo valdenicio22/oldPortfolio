@@ -1,52 +1,50 @@
 export default {
+  grid: {
+    container: '130rem',
+    gutter: '3.2rem'
+  },
   border: {
-    radius: {
-      medium: '0.8rem',
-      large: '3.2rem'
-    }
+    radius: '0.4rem'
   },
   font: {
-    family: 'Source Sans Pro, sans-serif',
+    family:
+      "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     weight: {
-      regular: 400,
-      semiBold: 600,
-      bold: 700
+      light: 300,
+      normal: 400,
+      bold: 600
     },
     sizes: {
-      xsmall: '1.2rem', // 12px
+      xsmall: '1.2rem',
       small: '1.4rem',
       medium: '1.6rem',
       large: '1.8rem',
-      xlarge: '2.4rem',
-      xxlarge: '3rem',
-      xxxlarge: '3.7rem' // 48px
+      xlarge: '2.0rem',
+      xxlarge: '2.8rem'
     }
   },
   colors: {
-    lightModeBg: '#E8E7E3',
-    white: '#FFFFFF',
-    black: '#252627',
-
-    textGray: '#d9d9d9',
-    lighterGray: '#DEDAF0',
-    lightGray: '#EBEEF2',
-    mediumGray: '#E8E7E3',
-    darkGray: '#757678;',
-
-    redError: '#E25C5C',
-
-    lighterBlue: '#D2CCFE',
-    lightBlue: '#A599FE',
-    mediumBlue: '#7966FD',
-    darkBlue: '#4C33FD',
-    primary: '#1E00FC',
-
-    lightPink: '#F6C1DA',
-    mediumPink: '#EA78AE',
-    secondary: '#DF3083'
+    primary: '#F231A5',
+    secondary: '#3CD3C1',
+    mainBg: '#06092B',
+    white: '#FAFAFA',
+    black: '#030517',
+    lightGray: '#EAEAEA',
+    gray: '#8F8F8F',
+    darkGray: '#2E2F42'
+  },
+  spacings: {
+    xxsmall: '0.8rem',
+    xsmall: '1.6rem',
+    small: '2.4rem',
+    medium: '3.2rem',
+    large: '4.0rem',
+    xlarge: '4.8rem',
+    xxlarge: '5.6rem'
   },
   containers: {
-    mobile: '36rem', //360px
-    desktop: '112rem' //1120px
+    regularDesktop: {
+      width: '112rem'
+    }
   }
-} as const
+}
