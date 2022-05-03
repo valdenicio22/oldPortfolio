@@ -4,29 +4,20 @@ export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.mainBg};
 `
 
-export const WelcomeSection = styled.div`
-  width: 100%;
-  height: 68rem;
-  border: 2px solid red;
-`
 export const WorkSection = styled.div`
   width: 100%;
   height: 68rem;
-  background-color: white;
-  border: 2px solid green;
-  color: black;
+  background-color: ${({ theme }) => theme.colors.secondaryBg};
 `
 export const AboutMeSection = styled.div`
   width: 100%;
   height: 68rem;
-  border: 2px solid yellow;
 `
 export const ConnectSection = styled.div`
   width: 100%;
   height: 68rem;
   background-color: white;
-  border: 2px solid pink;
-  color: black;
+  background-color: ${({ theme }) => theme.colors.secondaryBg};
 `
 export const FooterContainer = styled.div`
   width: 112rem;

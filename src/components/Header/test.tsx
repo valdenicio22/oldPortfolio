@@ -1,9 +1,11 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { renderWithThemeProvider } from '../../utils/renderWithThemeProvider'
+
 import Header from '.'
 
 describe('<Header />', () => {
   it('should render the Header', () => {
-    render(<Header />)
+    renderWithThemeProvider(<Header />)
     expect(screen.getByRole('banner')).toBeInTheDocument()
   })
 })

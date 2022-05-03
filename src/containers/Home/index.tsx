@@ -2,14 +2,13 @@ import Header from 'components/Header'
 import { Github, Linkedin } from '@styled-icons/bootstrap'
 import * as S from './styles'
 import Link from 'next/link'
+import Welcome from 'components/Welcome'
 
 const Home = () => {
   return (
     <S.Wrapper>
       <Header />
-      <S.WelcomeSection id="welcome">
-        <h1>Hey, Im Valdenício Ferreira, Frontend developer</h1>
-      </S.WelcomeSection>
+      <Welcome id="welcome" />
       <S.WorkSection id="work">
         <h1>Work Section</h1>
       </S.WorkSection>
