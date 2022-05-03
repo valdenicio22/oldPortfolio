@@ -1,8 +1,4 @@
 export default {
-  grid: {
-    container: '130rem',
-    gutter: '3.2rem'
-  },
   border: {
     radius: '0.4rem'
   },
@@ -19,7 +15,7 @@ export default {
       small: '1.4rem',
       medium: '1.6rem',
       large: '1.8rem',
-      xlarge: '2.0rem',
+      xlarge: '3.8rem',
       xxlarge: '4.5rem'
     }
   },
@@ -33,18 +29,7 @@ export default {
     gray: '#8F8F8F',
     darkGray: '#2E2F42'
   },
-  spacings: {
-    xxsmall: '0.8rem',
-    xsmall: '1.6rem',
-    small: '2.4rem',
-    medium: '3.2rem',
-    large: '4.0rem',
-    xlarge: '4.8rem',
-    xxlarge: '5.6rem'
-  },
   containers: {
-    regularDesktop: {
-      width: '112rem'
-    }
+    regularDesktop: '128rem'
   }
 }
