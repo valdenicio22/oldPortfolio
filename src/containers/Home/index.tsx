@@ -3,6 +3,7 @@ import { Github, Linkedin } from '@styled-icons/bootstrap'
 import * as S from './styles'
 import Link from 'next/link'
 import Welcome from 'components/Welcome'
+import AboutMe from 'components/AboutMe'
 
 const Home = () => {
   return (
@@ -12,9 +13,7 @@ const Home = () => {
       <S.WorkSection id="work">
         <h1>Work Section</h1>
       </S.WorkSection>
-      <S.AboutMeSection id="aboutMe">
-        <h1>About Me Section</h1>
-      </S.AboutMeSection>
+      <AboutMe id="aboutMe" />
       <S.ConnectSection id="connect">
         <h1>Connect Section</h1>
       </S.ConnectSection>

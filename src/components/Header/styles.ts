@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const NavListContainer = styled.header`
   width: 100%;
-  max-height: 15rem;
+  max-height: 12.8rem;
   height: 100%;
 `
 
