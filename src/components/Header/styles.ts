@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const NavListContainer = styled.div`
+export const NavListContainer = styled.header`
   width: 112rem;
   margin: 0 auto;
   height: 8rem;
