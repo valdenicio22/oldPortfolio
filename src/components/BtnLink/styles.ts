@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     width: 18rem;
     padding: 1.3rem 1.5rem;
-    border-radius: 0.6rem;
+    border-radius: 0.4rem;
 
     text-align: center;
     background-color: ${theme.colors.primary};
