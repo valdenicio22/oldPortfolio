@@ -3,13 +3,9 @@ import Marker from 'components/Marker'
 import * as S from './styles'
 import { Laptop, Person, Briefcase } from '@styled-icons/bootstrap'
 
-export type AboutMeProps = {
-  id: 'aboutMe'
-}
-
-const AboutMe = ({ id }: AboutMeProps) => {
+const AboutMe = () => {
   return (
-    <S.Wrapper id={id}>
+    <S.Wrapper>
       <S.AboutMeInfoContainer>
         <S.SmallTitleContainer>
           <Marker />
@@ -57,7 +53,7 @@ const AboutMe = ({ id }: AboutMeProps) => {
             </S.SkillsToolsItem>
 
             <S.SkillsToolsItem>
-              <strong>Tools:</strong> Figma, Github.
+              <strong>Tools:</strong> Figma, VsCode, Github.
             </S.SkillsToolsItem>
           </S.Description>
         </S.DetailsContainer>

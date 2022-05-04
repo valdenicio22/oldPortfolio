@@ -2,23 +2,18 @@ import styled from 'styled-components'
 
 export const NavListContainer = styled.header`
   width: 100%;
-  max-height: 12.8rem;
-  height: 100%;
+  height: 12.8rem;
+
+  padding: 4.6rem 0;
 `
 
 export const NavListContent = styled.div`
-  width: 112rem;
+  width: ${({ theme }) => theme.containers.regularDesktop};
   margin: 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
-  position: fixed;
-  top: 0;
-  right: 2rem;
-
-  height: 8rem;
 `
 
 export const NavList = styled.ul`
