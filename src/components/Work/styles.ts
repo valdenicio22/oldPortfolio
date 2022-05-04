@@ -81,7 +81,6 @@ export const ProjectDescription = styled.p``
 export const ProjectsBtns = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 2rem;
 `
 
