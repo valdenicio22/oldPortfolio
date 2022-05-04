@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  width: ${({ theme }) => theme.containers.regularDesktop};
-  margin: 6rem auto;
+  max-width: ${({ theme }) => theme.containers.regularDesktop};
+  width: 100%;
+  margin: 0 auto;
 
   display: flex;
   align-items: center;
