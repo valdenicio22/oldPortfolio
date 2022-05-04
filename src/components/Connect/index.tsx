@@ -10,7 +10,7 @@ const Connect = () => {
           <S.SmallTitle>Connect</S.SmallTitle>
         </S.SmallTitleContainer>
 
-        <S.Title>Interested in working with me or perhaps just talk</S.Title>
+        <S.Title>Interested in working with me or perhaps just talk?</S.Title>
 
         <S.Msg>
           React me on social media, by filling out the contact form or by
