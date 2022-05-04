@@ -1,9 +1,10 @@
-import Header from 'components/Header'
-import * as S from './styles'
+import Header from '../../components/Header'
 import Welcome from '../../components/Welcome'
 import AboutMe from '../../components/AboutMe'
 import Connect from '../../components/Connect'
 import Footer from '../../components/Footer'
+import Work from '../../components/Work'
+import * as S from './styles'
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
         <Welcome />
       </S.WelcomeSection>
       <S.WorkSection id="work">
-        <h1>Work Section</h1>
+        <Work />
       </S.WorkSection>
       <S.AboutMeSection id="aboutMe">
         <AboutMe />
