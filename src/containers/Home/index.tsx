@@ -2,20 +2,25 @@ import Header from 'components/Header'
 import { Github, Linkedin } from '@styled-icons/bootstrap'
 import * as S from './styles'
 import Link from 'next/link'
-import Welcome from 'components/Welcome'
-import AboutMe from 'components/AboutMe'
+import Welcome from '../../components/Welcome'
+import AboutMe from '../../components/AboutMe'
+import Connect from '../../components/Connect'
 
 const Home = () => {
   return (
     <S.Wrapper>
       <Header />
-      <Welcome id="welcome" />
+      <S.WelcomeSection id="welcome">
+        <Welcome />
+      </S.WelcomeSection>
       <S.WorkSection id="work">
         <h1>Work Section</h1>
       </S.WorkSection>
-      <AboutMe id="aboutMe" />
+      <S.AboutMeSection id="aboutMe">
+        <AboutMe />
+      </S.AboutMeSection>
       <S.ConnectSection id="connect">
-        <h1>Connect Section</h1>
+        <Connect />
       </S.ConnectSection>
       <S.FooterContainer>
         <S.CopyRight>© CopyRight 2022</S.CopyRight>
