@@ -5,7 +5,7 @@ import Header from '.'
 
 describe('<Header />', () => {
   it('should render the Header', () => {
-    renderWithThemeProvider(<Header />)
+    renderWithThemeProvider(<Header id={''} />)
     expect(screen.getByRole('banner')).toBeInTheDocument()
   })
 })

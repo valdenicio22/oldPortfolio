@@ -9,7 +9,7 @@ import * as S from './styles'
 const Home = () => {
   return (
     <S.Wrapper>
-      <Header />
+      <Header id="header" />
       <S.WelcomeSection id="welcome">
         <Welcome />
       </S.WelcomeSection>
