@@ -30,6 +30,6 @@ export default {
     darkGray: '#2E2F42'
   },
   containers: {
-    regularDesktop: '128rem'
+    desktop: '128rem'
   }
 }
