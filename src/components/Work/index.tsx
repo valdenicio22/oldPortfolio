@@ -21,7 +21,7 @@ const Work = () => {
     <S.Wrapper>
       <S.SmallTitleContainer>
         <Marker />
-        <S.SmallTitle>Connect</S.SmallTitle>
+        <S.SmallTitle>Work</S.SmallTitle>
       </S.SmallTitleContainer>
 
       <S.Title>Hand-picked projects for you to see.</S.Title>
