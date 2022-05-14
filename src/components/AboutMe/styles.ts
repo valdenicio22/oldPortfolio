@@ -1,4 +1,8 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+type Props = {
+  isAboutMeVisible: boolean
+}
 
 export const Wrapper = styled.div`
   max-width: ${({ theme }) => theme.containers.regularDesktop};
@@ -10,9 +14,21 @@ export const Wrapper = styled.div`
   gap: 2rem;
 `
 
-export const AboutMeInfoContainer = styled.div`
-  max-width: 68rem;
-  width: 100%;
+const AboutMeModifiers = {
+  isVisible: () => css`
+    opacity: 1;
+  `
+}
+
+export const AboutMeInfoContainer = styled.div<Props>`
+  ${({ isAboutMeVisible }) => css`
+    max-width: 68rem;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+
+    ${isAboutMeVisible && AboutMeModifiers.isVisible()}
+  `}
 `
 
 export const SmallTitleContainer = styled.div`

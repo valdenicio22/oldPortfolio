@@ -2,11 +2,20 @@ import BtnLink from 'components/BtnLink'
 import Marker from 'components/Marker'
 import * as S from './styles'
 import { Laptop, Person, Briefcase } from '@styled-icons/bootstrap'
+import { useInView } from 'react-intersection-observer'
 
 const AboutMe = () => {
+  const [myRef, inView] = useInView({
+    threshold: 0.15
+  })
+
   return (
     <S.Wrapper>
-      <S.AboutMeInfoContainer>
+      <S.AboutMeInfoContainer
+        isAboutMeVisible={inView}
+        id="aboutMe"
+        ref={myRef}
+      >
         <S.SmallTitleContainer>
           <Marker />
           <S.SmallTitle>About</S.SmallTitle>

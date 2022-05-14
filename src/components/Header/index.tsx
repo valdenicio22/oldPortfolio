@@ -1,8 +1,12 @@
 import Link from 'next/link'
 import * as S from './styles'
 
-const Header = () => (
-  <S.NavListContainer>
+export type HeaderProps = {
+  id: string
+}
+
+const Header = ({ id }: HeaderProps) => (
+  <S.NavListContainer id={id}>
     <S.NavListContent>
       <S.NavList>
         <S.NavItem>

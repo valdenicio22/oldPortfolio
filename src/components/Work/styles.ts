@@ -79,18 +79,22 @@ export const ProjectType = styled.p`
 export const ProjectDescription = styled.p``
 
 export const ProjectsBtns = styled.div`
+  width: 100%;
+  max-height: fit-content;
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin-top: 4rem;
 `
 
 export const ProjectsBtn = styled.button`
   ${({ theme }) => css`
     background-color: ${theme.colors.primary};
     color: ${theme.colors.white};
-    margin-top: 4rem;
+
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
+    border: 5px solid black;
 
     border: none;
     outline: none;
