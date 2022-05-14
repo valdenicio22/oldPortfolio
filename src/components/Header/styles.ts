@@ -1,29 +1,57 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
-export const NavListContainer = styled.header`
-  width: 100%;
-  height: 12.8rem;
+export const Wrapper = styled.header`
+  ${({ theme }) => css`
+    width: 100%;
+    background-color: ${theme.colors.mainBg};
 
-  padding: 4.6rem 0;
+    padding: 0 2rem;
+
+    ${media.greaterThan('small')`
+      padding: 0 3rem;
+    `}
+  `}
 `
 
-export const NavListContent = styled.div`
-  width: ${({ theme }) => theme.containers.regularDesktop};
-  margin: 0 auto;
+export const NavListContainer = styled.div`
+  ${({ theme }) => css`
+    max-width: ${theme.containers.desktop};
+    width: 100%;
+    height: 8rem;
 
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  `}
+`
+
+export const Logo = styled.a`
+  ${({ theme }) => css`
+    cursor: pointer;
+
+    text-decoration: none;
+    color: ${theme.colors.white};
+
+    transition: filter 0.2s;
+    &:hover {
+      filter: brightness(0.8);
+    }
+    span {
+      color: ${theme.colors.primary};
+    }
+  `}
 `
 
 export const NavList = styled.ul`
   list-style: none;
   display: flex;
-  gap: 2rem;
 
-  li:last-child {
-    margin-right: 2rem;
-  }
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 `
 export const NavItem = styled.li`
   a {
