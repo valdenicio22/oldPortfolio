@@ -1,4 +1,4 @@
-import styled, { css, DefaultTheme } from 'styled-components'
+import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 type Props = {
@@ -8,29 +8,26 @@ type Props = {
 const modifiers = {
   size: () => css`
     width: 3rem;
-  `,
-  fontSize: (theme: DefaultTheme) => css`
-    font-size: ${theme.font.sizes.medium};
-
-    ${media.greaterThan('small')`
-      font-size: ${theme.font.sizes.large};
-    `}
   `
 }
 
-export const Wrapper = styled.div<Props>`
-  ${({ theme, size }) => css`
+export const Wrapper = styled.div`
+  ${({ theme }) => css`
     display: flex;
     align-items: center;
     gap: 2rem;
 
-    font-size: ${theme.font.sizes.large};
     font-weight: ${theme.font.weight.bold};
 
-    ${media.greaterThan('small')`
+    font-size: ${theme.font.sizes.medium};
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.large};
+    `}
+
+    ${media.greaterThan('large')`
       font-size: ${theme.font.sizes.xlarge};
     `}
-    ${size && modifiers.fontSize(theme)};
   `}
 `
 

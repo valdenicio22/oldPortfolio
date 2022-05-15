@@ -3,6 +3,6 @@ import { renderWithThemeProvider } from '../../utils/renderWithThemeProvider'
 
 describe('<Marker />', () => {
   it('should render the Marker', () => {
-    renderWithThemeProvider(<Marker />)
+    renderWithThemeProvider(<Marker>Who am i</Marker>)
   })
 })
