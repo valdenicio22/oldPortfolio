@@ -11,6 +11,9 @@ export const Wrapper = styled.header`
     ${media.greaterThan('small')`
       padding: 0 3rem;
     `}
+    ${media.greaterThan('large')`
+      padding: 0rem 4rem;
+    `}
   `}
 `
 

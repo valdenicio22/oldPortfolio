@@ -2,8 +2,14 @@ import * as S from './styles'
 
 export type MarkerProps = {
   size?: 'small'
+  children: string
 }
 
-const Marker = ({ size }: MarkerProps) => <S.Wrapper size={size} />
+const Marker = ({ size, children }: MarkerProps) => (
+  <S.Wrapper>
+    <S.Marker size={size}></S.Marker>
+    {children}
+  </S.Wrapper>
+)
 
 export default Marker
