@@ -7,6 +7,7 @@ import { projectsData } from '../../Mock/projects'
 import { useState } from 'react'
 import { Project } from '../../types/types'
 import Link from 'next/link'
+import MediaMatch from 'components/MediaMatch'
 
 const Work = () => {
   const projects: Project[] = [...projectsData]
@@ -64,6 +65,23 @@ const Work = () => {
             })}
           </S.ProjectDescription>
         </S.ProjectDetailsContainer>
+        <MediaMatch greaterThan="medium">
+          <S.ExternalMedias>
+            {!!projects[currentProject].online && (
+              // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+              <Link href={projects[currentProject].online!} passHref>
+                <S.Media target="_blank">
+                  <LogoVercel width={25} height={25} /> Visit Online
+                </S.Media>
+              </Link>
+            )}
+            <Link href={projects[currentProject].github} passHref>
+              <S.Media target="_blank">
+                <LogoGithub width={25} height={25} /> Visit Github
+              </S.Media>
+            </Link>
+          </S.ExternalMedias>
+        </MediaMatch>
       </S.ProjectInfoContainer>
 
       <S.ProjectImgContainer>
@@ -71,21 +89,23 @@ const Work = () => {
           src={projects[currentProject].img}
           alt={projects[currentProject].name}
         />
-        <S.ExternalMedias>
-          {!!projects[currentProject].online && (
-            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            <Link href={projects[currentProject].online!} passHref>
+        <MediaMatch lessThan="medium">
+          <S.ExternalMedias>
+            {!!projects[currentProject].online && (
+              // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+              <Link href={projects[currentProject].online!} passHref>
+                <S.Media target="_blank">
+                  <LogoVercel width={25} height={25} /> Visit Online
+                </S.Media>
+              </Link>
+            )}
+            <Link href={projects[currentProject].github} passHref>
               <S.Media target="_blank">
-                <LogoVercel width={25} height={25} /> Visit Online
+                <LogoGithub width={25} height={25} /> Visit Github
               </S.Media>
             </Link>
-          )}
-          <Link href={projects[currentProject].github} passHref>
-            <S.Media target="_blank">
-              <LogoGithub width={25} height={25} /> Visit Github
-            </S.Media>
-          </Link>
-        </S.ExternalMedias>
+          </S.ExternalMedias>
+        </MediaMatch>
       </S.ProjectImgContainer>
     </S.WorkContainer>
   )

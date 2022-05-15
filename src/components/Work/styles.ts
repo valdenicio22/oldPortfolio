@@ -46,7 +46,7 @@ export const Title = styled.h2`
 
 export const ProjectInfoContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
 
@@ -62,7 +62,11 @@ export const PaginationContainer = styled.div`
   justify-content: center;
   gap: 1.5rem;
 
-  margin-bottom: 3rem;
+  margin: 2rem 0 3rem;
+
+  ${media.greaterThan('large')`
+    margin: 0rem 0 4rem;
+  `}
 `
 
 export const Btn = styled.button`
@@ -119,7 +123,7 @@ export const ProjectImgContainer = styled.div`
 
   ${media.greaterThan('medium')`
     grid-area: ProjectImgContainer;
-    padding-top: 9.5rem;
+    padding-top: 10rem;
   `}
 `
 
