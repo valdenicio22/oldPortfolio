@@ -1,32 +1,35 @@
-import styled from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
+import media from 'styled-media-query'
+
+type SectionProps = {
+  changeBg?: boolean
+}
 
 export const Wrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.mainBg};
+  ${({ theme }) => css`
+    background-color: ${theme.colors.mainBg};
+  `}
 `
 
-export const WelcomeSection = styled.div`
-  width: 100%;
-  padding: 7rem 0;
-  min-height: 70rem;
-`
+const sectionModifiers = {
+  changeBgColor: (theme: DefaultTheme) => css`
+    background-color: ${theme.colors.secondaryBg};
+  `
+}
 
-export const WorkSection = styled.div`
-  width: 100%;
-  background-color: ${({ theme }) => theme.colors.secondaryBg};
-  padding: 7rem 0;
-  min-height: 70rem;
-  height: 100%;
-`
-export const AboutMeSection = styled.div`
-  width: 100%;
-  padding: 7rem 0;
-  min-height: 70rem;
-  height: 100%;
-`
-export const ConnectSection = styled.div`
-  width: 100%;
-  background-color: ${({ theme }) => theme.colors.secondaryBg};
-  padding: 7rem 0;
-  min-height: 70rem;
-  height: 100%;
+export const Section = styled.div<SectionProps>`
+  ${({ theme, changeBg }) => css`
+    width: 100%;
+    padding: 7rem 2rem;
+    min-height: 70rem;
+
+    ${media.greaterThan('small')`
+      padding: 7rem 3rem;
+    `}
+    ${media.greaterThan('large')`
+      padding: 7rem 4rem;
+    `}
+
+    ${changeBg && sectionModifiers.changeBgColor(theme)}
+  `}
 `
