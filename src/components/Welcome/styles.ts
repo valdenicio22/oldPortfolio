@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const WelcomeContainer = styled.section`
+export const WelcomeContainer = styled.div`
   ${({ theme }) => css`
     max-width: ${theme.containers.desktop};
     width: 100%;
