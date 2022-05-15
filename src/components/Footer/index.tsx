@@ -10,13 +10,13 @@ const Footer = () => (
       <S.LinksContainer>
         <Link href="https://github.com/valdenicio22" passHref>
           <S.SocialMedia target={'_blank'}>
-            <Github width={30} height={30} color={'white'} />
+            <Github />
           </S.SocialMedia>
         </Link>
 
         <Link href="https://www.linkedin.com/in/valdenicioferreira/" passHref>
           <S.SocialMedia target={'_blank'}>
-            <Linkedin width={30} height={30} color={'white'} />
+            <Linkedin />
           </S.SocialMedia>
         </Link>
       </S.LinksContainer>

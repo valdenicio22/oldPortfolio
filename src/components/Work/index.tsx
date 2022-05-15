@@ -3,68 +3,111 @@ import * as S from './styles'
 import { ArrowLeft, ArrowRight } from '@styled-icons/bootstrap'
 import { LogoVercel, LogoGithub } from '@styled-icons/ionicons-solid'
 
-import { projects } from '../../Mock/projects'
+import { projectsData } from '../../Mock/projects'
 import { useState } from 'react'
-
-type ProjectsData = {
-  id: number
-  name: string
-  description: string
-  img: string
-}
+import { Project } from '../../types/types'
+import Link from 'next/link'
+import MediaMatch from 'components/MediaMatch'
 
 const Work = () => {
-  const projectsData: ProjectsData[] = [...projects]
+  const projects: Project[] = [...projectsData]
   const [currentProject, setCurrentProject] = useState(0)
 
   return (
-    <S.Wrapper>
-      <S.SmallTitleContainer>
-        <Marker />
-        <S.SmallTitle>Work</S.SmallTitle>
-      </S.SmallTitleContainer>
+    <S.WorkContainer>
+      <S.IntroContainer>
+        <Marker>Work</Marker>
+        <S.Title>Hand-picked projects for you to see.</S.Title>
+      </S.IntroContainer>
 
-      <S.Title>Hand-picked projects for you to see.</S.Title>
+      <S.ProjectInfoContainer>
+        <S.PaginationContainer>
+          <S.Btn
+            disabled={currentProject <= 0 && true}
+            onClick={() => setCurrentProject((prev) => prev - 1)}
+          >
+            <ArrowLeft width={22} height={22} />
+          </S.Btn>
+          <S.CurrentPage>
+            {currentProject + 1} / {projects.length}
+          </S.CurrentPage>
+          <S.Btn
+            disabled={currentProject >= projects.length - 1 && true}
+            onClick={() => setCurrentProject((prev) => prev + 1)}
+          >
+            <ArrowRight width={22} height={22} />
+          </S.Btn>
+        </S.PaginationContainer>
 
-      <S.WorkContainer>
-        <S.ProjectInfoContainer>
-          <S.BtnsPaginationContainer>
-            <S.Btn onClick={() => setCurrentProject((prev) => prev - 1)}>
-              <ArrowLeft width={22} height={22} />
-            </S.Btn>
-            <p>
-              {currentProject + 1}/{projectsData.length}
-            </p>
-            <S.Btn onClick={() => setCurrentProject((prev) => prev + 1)}>
-              <ArrowRight width={22} height={22} />
-            </S.Btn>
-          </S.BtnsPaginationContainer>
+        <S.ProjectDetailsContainer>
+          <S.ProjectName>{projects[currentProject].name}</S.ProjectName>
 
-          <S.ProjectDetailsContainer>
-            <S.ProjectTitle>{projectsData[currentProject].name}</S.ProjectTitle>
-            <S.ProjectType>
-              <Marker size="small" /> Web development
-            </S.ProjectType>
+          <Marker size="small">About the project</Marker>
+          <S.ProjectDescription>
+            {projects[currentProject].description}
+          </S.ProjectDescription>
 
-            <S.ProjectDescription>
-              {projectsData[currentProject].description}
-            </S.ProjectDescription>
+          <Marker size="small">Built with</Marker>
+          <S.ProjectDescription>
+            {projects[currentProject].technologies.map((technology, i) => {
+              if (i === projects[currentProject].technologies.length - 1)
+                return `${technology}.`
+              return `${technology}, `
+            })}
+          </S.ProjectDescription>
 
-            <S.ProjectsBtns>
-              <S.ProjectsBtn>
-                <LogoVercel width={25} height={25} /> Visit Online
-              </S.ProjectsBtn>
-              <S.ProjectsBtn>
+          <Marker size="small">Project Highlights</Marker>
+          <S.ProjectDescription>
+            {projects[currentProject].highlights.map((highlight, i) => {
+              if (i === projects[currentProject].highlights.length - 1)
+                return `${highlight}.`
+              return `${highlight}, `
+            })}
+          </S.ProjectDescription>
+        </S.ProjectDetailsContainer>
+        <MediaMatch greaterThan="medium">
+          <S.ExternalMedias>
+            {!!projects[currentProject].online && (
+              // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+              <Link href={projects[currentProject].online!} passHref>
+                <S.Media target="_blank">
+                  <LogoVercel width={25} height={25} /> Visit Online
+                </S.Media>
+              </Link>
+            )}
+            <Link href={projects[currentProject].github} passHref>
+              <S.Media target="_blank">
                 <LogoGithub width={25} height={25} /> Visit Github
-              </S.ProjectsBtn>
-            </S.ProjectsBtns>
-          </S.ProjectDetailsContainer>
-        </S.ProjectInfoContainer>
-        <S.ProjectImgContainer>
-          <img src="/img/joinMe.png" alt="JoinMe" />
-        </S.ProjectImgContainer>
-      </S.WorkContainer>
-    </S.Wrapper>
+              </S.Media>
+            </Link>
+          </S.ExternalMedias>
+        </MediaMatch>
+      </S.ProjectInfoContainer>
+
+      <S.ProjectImgContainer>
+        <S.Img
+          src={projects[currentProject].img}
+          alt={projects[currentProject].name}
+        />
+        <MediaMatch lessThan="medium">
+          <S.ExternalMedias>
+            {!!projects[currentProject].online && (
+              // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+              <Link href={projects[currentProject].online!} passHref>
+                <S.Media target="_blank">
+                  <LogoVercel width={25} height={25} /> Visit Online
+                </S.Media>
+              </Link>
+            )}
+            <Link href={projects[currentProject].github} passHref>
+              <S.Media target="_blank">
+                <LogoGithub width={25} height={25} /> Visit Github
+              </S.Media>
+            </Link>
+          </S.ExternalMedias>
+        </MediaMatch>
+      </S.ProjectImgContainer>
+    </S.WorkContainer>
   )
 }
 

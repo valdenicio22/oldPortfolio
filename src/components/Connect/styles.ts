@@ -1,40 +1,25 @@
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.div`
-  max-width: ${({ theme }) => theme.containers.regularDesktop};
+export const ConnectContainer = styled.div`
+  max-width: ${({ theme }) => theme.containers.desktop};
   width: 100%;
   margin: 0 auto;
 `
 
-export const ConnectContainer = styled.div`
-  max-width: 60rem;
-  width: 100%;
-`
-
-export const SmallTitleContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-`
-
-export const SmallTitle = styled.p`
-  font-weight: ${({ theme }) => theme.font.weight.bold};
-  font-size: ${({ theme }) => theme.font.sizes.large};
-`
-
 export const Title = styled.h2`
-  font-size: ${({ theme }) => theme.font.sizes.xlarge};
-  font-weight: ${({ theme }) => theme.font.weight.bold};
-  margin-top: 3.2rem;
-  margin-bottom: 3rem;
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.xxlarge};
+    font-weight: ${theme.font.weight.bold};
+    margin: 3rem 0 4rem;
+  `}
 `
 
 export const Msg = styled.p`
   ${({ theme }) => css`
+    width: 100%;
     line-height: 3rem;
     margin-bottom: 7rem;
     max-width: 40rem;
-    width: 100%;
 
     strong {
       color: ${theme.colors.primary};
@@ -43,7 +28,9 @@ export const Msg = styled.p`
   `}
 `
 
-export const FormContainer = styled.form``
+export const FormContainer = styled.form`
+  max-width: 55rem;
+`
 export const FieldsGroup = styled.div`
   display: flex;
   align-items: flex-start;
@@ -60,37 +47,32 @@ export const Label = styled.label`
   `}
 `
 
-export const InputContainer = styled.div`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.mainBg};
-    border-left: 8px solid ${theme.colors.primary};
-  `}
-`
-
 export const Input = styled.input`
   ${({ theme }) => css`
+    width: 100%;
     background-color: ${theme.colors.mainBg};
     color: ${theme.colors.white};
-    font-size: ${theme.font.sizes.large};
     border: none;
     outline: none;
     border-radius: 0.25rem;
 
-    width: 50rem;
-    margin: 1rem 0;
-    padding: 0 1.5rem;
+    padding: 1.5rem;
+
+    border-left: 8px solid ${theme.colors.primary};
   `}
 `
 export const Textarea = styled.textarea`
   ${({ theme }) => css`
+    width: 100%;
     background-color: ${theme.colors.mainBg};
     color: ${theme.colors.white};
-    font-size: ${theme.font.sizes.large};
+
     border: none;
     outline: none;
     border-radius: 0.25rem;
+    padding: 1.65rem;
+
     border-left: 8px solid ${theme.colors.primary};
-    padding: 0 1.65rem;
   `}
 `
 

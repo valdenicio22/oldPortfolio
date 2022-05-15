@@ -1,27 +1,27 @@
 import Header from '../../components/Header'
 import Welcome from '../../components/Welcome'
+import Work from '../../components/Work'
 import AboutMe from '../../components/AboutMe'
 import Connect from '../../components/Connect'
 import Footer from '../../components/Footer'
-import Work from '../../components/Work'
 import * as S from './styles'
 
 const Home = () => {
   return (
     <S.Wrapper>
       <Header id="header" />
-      <S.WelcomeSection id="welcome">
+      <S.Section id="welcome">
         <Welcome />
-      </S.WelcomeSection>
-      <S.WorkSection id="work">
+      </S.Section>
+      <S.Section id="work" changeBg={true}>
         <Work />
-      </S.WorkSection>
-      <S.AboutMeSection id="aboutMe">
+      </S.Section>
+      <S.Section id="aboutMe">
         <AboutMe />
-      </S.AboutMeSection>
-      <S.ConnectSection id="connect">
+      </S.Section>
+      <S.Section id="connect" changeBg={true}>
         <Connect />
-      </S.ConnectSection>
+      </S.Section>
       <Footer />
     </S.Wrapper>
   )

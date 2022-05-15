@@ -1,27 +1,57 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
-export const WelcomeContainer = styled.section`
-  max-width: ${({ theme }) => theme.containers.regularDesktop};
-  width: 100%;
-  margin: 0 auto;
+export const WelcomeContainer = styled.div`
+  ${({ theme }) => css`
+    max-width: ${theme.containers.desktop};
+    width: 100%;
+    margin: 0 auto;
+    min-height: 40rem;
 
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+    display: flex;
+    align-items: center;
+
+    ${media.greaterThan('medium')`
+      gap: 10rem;
+      justify-content: space-between;
+    `}
+  `}
 `
-export const ImgContainer = styled.div``
-
 export const WelcomeMsgContainer = styled.div``
 
 export const WelcomeMsg = styled.h1`
-  font-size: ${({ theme }) => theme.font.sizes.xxlarge};
-  line-height: 9rem;
-  strong {
-    color: ${({ theme }) => theme.colors.primary};
-  }
+  ${({ theme }) => css`
+    font-size: 3.2rem;
+    line-height: 5.5rem;
+
+    ${media.greaterThan('large')`
+      font-size: 4.8rem;
+    `}
+
+    span {
+      font-size: ${theme.font.sizes.xxlarge};
+
+      ${media.greaterThan('large')`
+        font-size: 3.5rem;
+      `}
+    }
+    strong {
+      color: ${theme.colors.primary};
+    }
+  `}
 `
 export const Msg = styled.p`
-  line-height: 9rem;
-  font-size: ${({ theme }) => theme.font.sizes.large};
-  padding-bottom: 2rem;
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.medium};
+
+    ${media.greaterThan('large')`
+        font-size: ${theme.font.sizes.xlarge};
+    `}
+    padding: 2rem 0 4rem;
+  `}
+`
+export const ImgContainer = styled.div`
+  /* width: 30rem;
+  height: 30rem;
+  background-color: red; */
 `

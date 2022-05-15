@@ -1,4 +1,5 @@
 import { createGlobalStyle, css } from 'styled-components'
+import media from 'styled-media-query'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -27,10 +28,17 @@ const GlobalStyles = createGlobalStyle`
     input,
     textarea,
     button {
-      font-size: ${theme.font.sizes.medium};
+      font-size: ${theme.font.sizes.small};
       font-family: ${theme.font.family};
       font-weight: ${theme.font.weight.normal};
       color: ${theme.colors.white};
+
+      ${media.greaterThan('small')`
+        font-size: ${theme.font.sizes.medium};
+      `}
+      ${media.greaterThan('large')`
+        font-size: ${theme.font.sizes.large};
+      `}
     }
     h1,
     h2,
