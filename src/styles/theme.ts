@@ -15,15 +15,15 @@ export default {
       small: '1.4rem',
       medium: '1.6rem',
       large: '1.8rem',
-      xlarge: '3.8rem',
-      xxlarge: '4.5rem'
+      xlarge: '2.0rem',
+      xxlarge: '2.5rem'
     }
   },
   colors: {
     primary: '#ec3f6e',
     mainBg: '#141628',
     secondaryBg: '#1b1e32',
-    white: '#FFFFFF',
+    white: '#FAFAFA',
     black: '#030517',
     lightGray: '#EAEAEA',
     gray: '#8F8F8F',
