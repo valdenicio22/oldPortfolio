@@ -20,6 +20,7 @@ export const Wrapper = styled.header`
 export const FooterContainer = styled.div`
   ${({ theme }) => css`
     max-width: ${theme.containers.desktop};
+    margin: 0 auto;
     width: 100%;
     height: 8rem;
 
@@ -49,8 +50,6 @@ export const SocialMedia = styled.a`
     `}
 
     &:hover {
-      width: 100%;
-      height: 100%;
       filter: brightness(0.8);
     }
   `}

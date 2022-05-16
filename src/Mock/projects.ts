@@ -1,9 +1,9 @@
 export const projectsData = [
   {
     id: 1,
-    name: 'joinme-ioasys-challenge',
+    name: 'joinMe',
     description:
-      'Application developed for the last stage of the IV bootcamp of Ioasys. Meet new people and participate in events with activities that interest you. Enjoy your free time doing what you love!',
+      'Application developed for the last stage of IV Ioasys bootcamp. Meet new people and participate in events with activities that interest you. Enjoy your free time doing what you love!',
     technologies: [
       'NextJs',
       'TypeScript',
@@ -27,9 +27,9 @@ export const projectsData = [
   },
   {
     id: 2,
-    name: 'Ioasys-Books',
+    name: 'Ioasys-Books-Challenge',
     description:
-      'Application to show theirs books by opening a modal with more details about the book',
+      'The challenge consists of logging in the user, present the book list on the home page, show book details in a modal, navigating between pages, and log out.',
     technologies: [
       'NextJs',
       'TypeScript',
@@ -39,12 +39,12 @@ export const projectsData = [
     ],
     highlights: [
       'User Authentication',
-      'Axios',
+      'Fetch on private routes',
       'Pagination',
       'React-Modal',
       'Media-Query'
     ],
-    img: '/img/joinMe.png',
+    img: '/img/ioasysBooksDesktop.gif',
     github: 'https://github.com/valdenicio22/ioasys-books',
     online: 'https://ioasys-books-rho.vercel.app/'
   },
@@ -70,7 +70,7 @@ export const projectsData = [
       'Sort',
       'Media-Query'
     ],
-    img: '/img/rest-countries-api.jpg',
+    img: '/img/restCountriesDesktop.gif',
     github: 'https://github.com/valdenicio22/rest-countries-api',
     online: 'https://rest-countries-api-one-mu.vercel.app/'
   }
