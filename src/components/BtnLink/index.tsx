@@ -7,9 +7,9 @@ export type BtnLinkProps = {
 }
 
 const BtnLink = ({ section, children }: BtnLinkProps) => (
-  <S.Wrapper>
-    <Link href={section}>{children}</Link>
-  </S.Wrapper>
+  <Link href={section} passHref>
+    <S.Wrapper>{children}</S.Wrapper>
+  </Link>
 )
 
 export default BtnLink

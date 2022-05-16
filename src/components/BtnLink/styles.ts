@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.a`
   ${({ theme }) => css`
-    width: 18rem;
+    max-width: 18rem;
+    width: 100%;
     padding: 1.3rem 1.5rem;
     border-radius: 0.4rem;
 
@@ -15,11 +16,9 @@ export const Wrapper = styled.div`
       filter: brightness(0.8);
     }
 
-    a {
-      text-decoration: none;
-      color: ${theme.colors.white};
-      font-weight: ${theme.font.weight.bold};
-      font-size: ${theme.font.sizes.large};
-    }
+    text-decoration: none;
+    color: ${theme.colors.white};
+    font-weight: ${theme.font.weight.bold};
+    font-size: ${theme.font.sizes.large};
   `}
 `
