@@ -1,58 +1,52 @@
+# My Personal portfolio
 
-![React Avançado](https://raw.githubusercontent.com/React-Avancado/boilerplate/master/public/img/logo-gh.svg)
+This is where I'm going to present same of the projects that I've been working with. This is the first version of my portfolio.
 
-This is a [Next.js](https://nextjs.org/) boilerplate to be used in a course called [React Avançado](https://reactavancado.com.br/).
-![ci](https://github.com/React-Avancado/boilerplate/workflows/ci/badge.svg)
-## What is inside?
+## Table of contents
 
-This project uses lot of stuff as:
+  - [Layout](#layout)
+  - [Built with](#built-with)
+  - [Project result](#project-result)
+  - [Author](#author)
 
-- [TypeScript](https://www.typescriptlang.org/)
-- [NextJS](https://nextjs.org/)
+
+### Layout
+
+<table>
+  <tr>
+    <td>
+      <img src="https://user-images.githubusercontent.com/40251933/168520367-73ad32da-7f6d-4ef8-92a3-d222d1404e87.png">
+    </td>
+    <td>
+      <img src="https://user-images.githubusercontent.com/40251933/168520159-1bcc58e0-73c5-401f-87f5-bfa9bf371b22.png">
+    </td>
+  </tr>
+</table>
+                
+                                                                        
+### Built with
+
+- [Next.js](https://nextjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
 - [Styled Components](https://styled-components.com/)
-- [Jest](https://jestjs.io/)
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 - [Storybook](https://storybook.js.org/)
-- [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Husky](https://github.com/typicode/husky)
+- [Styled-media-query](https://github.com/morajabi/styled-media-query)
 
-## Getting Started
+### Project result
+<table>
+  <tr>
+    <td>
+      <img src="https://user-images.githubusercontent.com/40251933/168519740-45a4fbed-89b4-4b15-a9a5-1cd2f5369e5c.gif">
+    </td>
+    <td>
+      <img src="https://user-images.githubusercontent.com/40251933/168519722-02f0135f-44be-4930-acd4-f76dcde973a2.gif">
+    </td>
+  </tr>
 
-First, run the development server:
+</table>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Author
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Commands
-
-- `dev`: runs your application on `localhost:3000`
-- `build`: creates the production build version
-- `start`: starts a simple server with the build production code
-- `lint`: runs the linter in all components and pages
-- `test`: runs jest to test all components and pages
-- `test:watch`: runs jest in watch mode
-- `storybook`: runs storybook on `localhost:6006`
-- `build-storybook`: create the build version of storybook
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- My Portfolio - https://valdenicio22.vercel.app/
+- Github: https://github.com/valdenicio22/rest-countries-api
+- Linkedin - https://www.linkedin.com/in/valdenicioferreira/
